@@ -6,7 +6,7 @@ export type State = {
 };
 
 export const initialState: State = {
-  currentTable: initTable({ numberOfColumns: 3, numberOfRows: 3 }),
+  currentTable: initTable(3, 3),
 } as const;
 
 export const CREATE_TABLE_ACTIONS = {

@@ -1,12 +1,7 @@
-export type TableSizeType = {
-  numberOfColumns: number;
-  numberOfRows: number;
-};
-
 export type TableType = {
   id: number;
   rows: TableRowType[];
-  size: TableSizeType;
+  columns: TableColumnType[];
 };
 
 export type TableRowType = {
@@ -17,6 +12,12 @@ export type TableRowType = {
 export type TableCellType = {
   text: string;
   color: string;
+  columnId: number;
   helperText?: string;
   backgroundColor: string;
+};
+
+export type TableColumnType = {
+  id: number;
+  width: number;
 };
