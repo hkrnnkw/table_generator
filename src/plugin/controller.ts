@@ -16,7 +16,7 @@ figma.ui.onmessage = (msg) => {
         rect.x = j * column.width;
         rect.y = i * row.height;
         rect.resize(column.width, row.height);
-        rect.fills = [{ type: 'SOLID', color: { r: 1, g: 0.5, b: 0 } }];
+        rect.fills = [{ type: 'SOLID', color: row.cells[j].backgroundColor }];
         figma.currentPage.appendChild(rect);
         nodes.push(rect);
       }

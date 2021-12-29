@@ -11,10 +11,10 @@ export type TableRowType = {
 
 export type TableCellType = {
   text: string;
-  color: string;
+  color: RGB;
   columnId: number;
   helperText?: string;
-  backgroundColor: string;
+  backgroundColor: RGB;
 };
 
 export type TableColumnType = {

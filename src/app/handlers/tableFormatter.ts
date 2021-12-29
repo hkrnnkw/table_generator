@@ -7,10 +7,10 @@ export const initTable = (
 ): TableType => {
   const cell = (columnId: number): TableCellType => ({
     text: '',
-    color: '#000000',
+    color: { r: 0, g: 0, b: 0 },
     columnId,
     helperText: '',
-    backgroundColor: '#FFFFFF',
+    backgroundColor: { r: 1, g: 1, b: 1 },
   });
   const row: TableRowType = {
     cells: [...Array(numberOfColumns)].map((_, i) => cell(i)),
