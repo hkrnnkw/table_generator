@@ -5,15 +5,15 @@ import { actions } from './reducer';
 
 // tableの参照&更新
 export const useCreateTable = () => {
-    const { currentTable } = useContext(CreateTableContext);
-    const dispatch = useContext(CreateTableUpdateContext);
+  const { currentTable } = useContext(CreateTableContext);
+  const dispatch = useContext(CreateTableUpdateContext);
 
-    const setCurrentTable = (table: TableType) => {
-        dispatch(actions.setCurrentTable(table));
-    };
+  const setCurrentTable = (table: TableType) => {
+    dispatch(actions.setCurrentTable(table));
+  };
 
-    return {
-        currentTable,
-        setCurrentTable,
-    } as const;
+  return {
+    currentTable,
+    setCurrentTable,
+  } as const;
 };

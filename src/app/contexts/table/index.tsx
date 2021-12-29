@@ -10,17 +10,17 @@ import { reducer } from './reducer';
 export const CreateTableContext = createContext<State>(initialState);
 // 更新用context
 export const CreateTableUpdateContext = createContext<
-    Dispatch<CreateTableActionType>
+  Dispatch<CreateTableActionType>
 >(() => {});
 
 export const CreateTableProvider = ({ children }: { children: ReactChild }) => {
-    const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-    return (
-        <CreateTableContext.Provider value={{ ...state }}>
-            <CreateTableUpdateContext.Provider value={dispatch}>
-                {children}
-            </CreateTableUpdateContext.Provider>
-        </CreateTableContext.Provider>
-    );
+  return (
+    <CreateTableContext.Provider value={{ ...state }}>
+      <CreateTableUpdateContext.Provider value={dispatch}>
+        {children}
+      </CreateTableUpdateContext.Provider>
+    </CreateTableContext.Provider>
+  );
 };
