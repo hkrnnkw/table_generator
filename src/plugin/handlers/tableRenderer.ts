@@ -13,7 +13,7 @@ const createCellText = async (
   text.y = y * rowHeight;
   text.resize(columnWidth, rowHeight);
   text.characters = cell.text;
-  text.strokes = [{ type: 'SOLID', color: cell.color }];
+  text.fills = [{ type: 'SOLID', color: cell.color }];
   return text;
 };
 
